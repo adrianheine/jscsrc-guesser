@@ -1,0 +1,27 @@
+{
+  "name": "jscsrc-guesser",
+  "version": "0.1.0",
+  "description": "Determine the JSCS ruleset some code currently follows",
+  "main": "index.js",
+  "scripts": {
+    "test": "jshint --show-non-errors . && mocha --harmony --check-leaks --recursive tests/**/*.test.js"
+  },
+  "keywords": [
+    "jscs"
+  ],
+  "author": "Adrian Heine <adrian.heine@wikimedia.de>",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "commander": "^2.7.1",
+    "es6-promise": "*",
+    "object-assign": "^2.0.0"
+  },
+  "devDependencies": {
+    "mocha": "",
+    "jscs": "1.12.*",
+    "jshint": "^2.7.0"
+  },
+  "bin": {
+    "jscsrc-guesser": "./bin/jscsrc-guesser"
+  }
+}
