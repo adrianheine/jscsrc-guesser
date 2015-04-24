@@ -46,4 +46,12 @@ describe('jscsRunner', function () {
       })
       .catch(done);
   });
+  it('does not alter first parameter', function (done) {
+    const rules = {requireDotNotation: true};
+    jscsRunner(rules, {es3: true}, [__dirname + '/es5-snippet.js'])
+      .then(function () {
+        done(Object.keys(rules).length === 1 ? null : 'Should not have altered first parameter');
+      })
+      .catch(done);
+  });
 });
