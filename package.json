@@ -4,7 +4,7 @@
   "description": "Determine the JSCS ruleset some code currently follows",
   "main": "index.js",
   "scripts": {
-    "test": "jshint --show-non-errors . && mocha --harmony --check-leaks --recursive tests/**/*.test.js"
+    "test": "jshint --show-non-errors . && jscs --esnext --verbose . && mocha --harmony --check-leaks --recursive tests/**/*.test.js"
   },
   "keywords": [
     "jscs"

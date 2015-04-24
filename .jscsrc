@@ -38,7 +38,6 @@
     "with",
     "void",
     "true",
-    "this",
     "null",
     "eval",
     "enum",
@@ -81,7 +80,6 @@
     "with",
     "void",
     "true",
-    "this",
     "null",
     "eval",
     "enum",
@@ -103,7 +101,6 @@
     "enum",
     "eval",
     "null",
-    "this",
     "true",
     "void",
     "with",
@@ -179,12 +176,10 @@
   "disallowSpaceAfterPrefixUnaryOperators": true,
   "disallowSpaceBeforePostfixUnaryOperators": true,
   "disallowSpacesInCallExpression": true,
-  "disallowSpacesInFunctionDeclaration": {
-    "beforeOpeningRoundBrace": true
-  },
   "disallowSpacesInsideParentheses": true,
   "disallowTrailingWhitespace": true,
   "disallowYodaConditions": true,
+  "maximumLineLength": 100,
   "requireBlocksOnNewline": true,
   "requireCamelCaseOrUpperCaseIdentifiers": true,
   "requireCapitalizedComments": true,
@@ -209,11 +204,8 @@
   "requireSpaceBetweenArguments": true,
   "requireSpacesInConditionalExpression": true,
   "requireSpacesInForStatement": true,
-  "requireSpacesInsideArrayBrackets": "all",
-  "requireSpacesInsideObjectBrackets": "all",
   "validateIndentation": 2,
   "validateParameterSeparator": ", ",
   "validateQuoteMarks": true,
-  "excludeFiles": ["node_modules/**"],
-  "maximumLineLength": 100
+  "excludeFiles": ["node_modules/**", "tests/**/*snippet.js"]
 }
