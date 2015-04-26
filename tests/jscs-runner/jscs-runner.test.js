@@ -17,30 +17,32 @@
 
 'use strict';
 
-var jscsRunner = require('../../lib/jscs-runner');
+const jscsRunner = require('../../lib/jscs-runner');
+const esNextSnippetPath = __dirname + '/../data/es-next-snippet.js';
+const es5SnippetPath = __dirname + '/../data/es5-snippet.js';
 
 describe('jscsRunner', function () {
   it('correctly passes esnext', function (done) {
-    jscsRunner({}, {esnext: true}, [__dirname + '/es-next-snippet.js']).then(function () {
+    jscsRunner({}, {esnext: true}, [esNextSnippetPath]).then(function () {
       done();
     }).catch(done);
   });
   it('correctly fails without esnext', function (done) {
-    jscsRunner({}, {esnext: false}, [__dirname + '/es-next-snippet.js']).then(function () {
+    jscsRunner({}, {esnext: false}, [esNextSnippetPath]).then(function () {
       done('Should not have passed');
     }).catch(function () {
       done();
     });
   });
   it('correctly fails without es3', function (done) {
-    jscsRunner({requireDotNotation: true}, {es3: false}, [__dirname + '/es5-snippet.js'])
+    jscsRunner({requireDotNotation: true}, {es3: false}, [es5SnippetPath])
       .then(function (failingRules) {
         done(failingRules.length === 1 ? null : 'Should have failed');
       })
       .catch(done);
   });
   it('correctly passes with es3', function (done) {
-    jscsRunner({requireDotNotation: true}, {es3: true}, [__dirname + '/es5-snippet.js'])
+    jscsRunner({requireDotNotation: true}, {es3: true}, [es5SnippetPath])
       .then(function (failingRules) {
         done(failingRules.length === 0 ? null : 'Should not have failed');
       })
@@ -48,7 +50,7 @@ describe('jscsRunner', function () {
   });
   it('does not alter first parameter', function (done) {
     const rules = {requireDotNotation: true};
-    jscsRunner(rules, {es3: true}, [__dirname + '/es5-snippet.js'])
+    jscsRunner(rules, {es3: true}, [es5SnippetPath])
       .then(function () {
         done(Object.keys(rules).length === 1 ? null : 'Should not have altered first parameter');
       })
