@@ -14,11 +14,11 @@
   "dependencies": {
     "commander": "^2.7.1",
     "es6-promise": "*",
-    "object-assign": "^2.0.0"
+    "object-assign": "^2.0.0",
+    "jscs": "1.13.*"
   },
   "devDependencies": {
     "mocha": "",
-    "jscs": "1.12.*",
     "jshint": "^2.7.0"
   },
   "bin": {
