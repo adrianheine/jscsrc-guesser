@@ -15,7 +15,7 @@
     "commander": "^2.7.1",
     "es6-promise": "*",
     "object-assign": "^2.0.0",
-    "jscs": "1.13.*"
+    "jscs": "~1.13.1"
   },
   "devDependencies": {
     "mocha": "",
