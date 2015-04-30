@@ -94,7 +94,6 @@
     "in",
     "do",
     "let",
-    "new",
     "try",
     "case",
     "else",
@@ -137,10 +136,6 @@
     "requireParamTypes": true,
     "checkRedundantParams": true,
     "checkParamNames": true
-  },
-  "disallowSpacesInNamedFunctionExpression": {
-    "beforeOpeningCurlyBrace": true,
-    "beforeOpeningRoundBrace": true
   },
   "requireSpacesInAnonymousFunctionExpression": {
     "beforeOpeningCurlyBrace": true,
@@ -205,6 +200,7 @@
   "requireSpacesInConditionalExpression": true,
   "requireSpacesInForStatement": true,
   "validateIndentation": 2,
+  "validateLineBreaks" : "LF",
   "validateParameterSeparator": ", ",
   "validateQuoteMarks": true,
   "excludeFiles": ["node_modules/**", "tests/**/*snippet.js"]

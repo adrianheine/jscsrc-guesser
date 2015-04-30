@@ -17,24 +17,16 @@
 
 'use strict';
 
-const jscsrcGuesser = require('./jscsrc-guesser');
+var jscsrcGuesser = require('../../lib/jscsrc-guesser');
 
-module.exports = function (program) {
-  const paths = program.args;
-  if (paths.length === 0) {
-    console.log('You need to pass path(s).');
-    return;
-  }
-
-  jscsrcGuesser(paths, program).then(function (result) {
-    result.rejectedRuleValues.forEach(function (ruleSet) {
-      const ruleName = Object.keys(ruleSet)[0];
-      const ruleValue = ruleSet[ruleName];
-      const ruleSerialization = ruleValue === true ? '' : (': ' + JSON.stringify(ruleValue));
-      process.stderr.write('Does not follow rule ' + ruleName + ruleSerialization + '\n');
-    });
-    console.log(JSON.stringify(result.config, null, 2));
-  }).catch(function (e) {
-    console.log(e.stack);
+describe('validateParameterSeparator', function () {
+  it('is not set if multiple values pass', function (done) {
+    jscsrcGuesser([__dirname + '/../data/es-next-snippet.js'], {esnext: true})
+    .then(function (result) {
+      if (result.config.validateParameterSeparator) {
+        return done('validateParameterSeparator should not be set');
+      }
+      done();
+    }).catch(done);
   });
-};
+});

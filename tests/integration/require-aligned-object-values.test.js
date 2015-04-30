@@ -17,24 +17,16 @@
 
 'use strict';
 
-const jscsrcGuesser = require('./jscsrc-guesser');
+var jscsrcGuesser = require('../../lib/jscsrc-guesser');
 
-module.exports = function (program) {
-  const paths = program.args;
-  if (paths.length === 0) {
-    console.log('You need to pass path(s).');
-    return;
-  }
-
-  jscsrcGuesser(paths, program).then(function (result) {
-    result.rejectedRuleValues.forEach(function (ruleSet) {
-      const ruleName = Object.keys(ruleSet)[0];
-      const ruleValue = ruleSet[ruleName];
-      const ruleSerialization = ruleValue === true ? '' : (': ' + JSON.stringify(ruleValue));
-      process.stderr.write('Does not follow rule ' + ruleName + ruleSerialization + '\n');
-    });
-    console.log(JSON.stringify(result.config, null, 2));
-  }).catch(function (e) {
-    console.log(e.stack);
+describe('requireAlignedObjectValues', function () {
+  it('is set to all if multiple values pass', function (done) {
+    jscsrcGuesser([__dirname + '/../data/es-next-snippet.js'], {esnext: true})
+    .then(function (result) {
+      if (result.config.requireAlignedObjectValues !== 'all') {
+        return done('requireAlignedObjectValues should be all');
+      }
+      done();
+    }).catch(done);
   });
-};
+});
