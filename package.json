@@ -23,5 +23,10 @@
   },
   "bin": {
     "jscsrc-guesser": "./bin/jscsrc-guesser"
-  }
+  },
+  "repository": "adrianheine/jscsrc-guesser",
+  "files": [
+    "bin",
+    "lib"
+  ]
 }
