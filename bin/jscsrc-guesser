@@ -1,4 +1,5 @@
-#!/usr/bin/node --harmony
+#!/usr/bin/env node --harmony
+
 /**
  * Copyright 2015 Adrian Heine <mail@adrianheine.de>
  *
