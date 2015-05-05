@@ -54,9 +54,9 @@ describe('Rule', function () {
       const subject = Rule.getObjectValueReducer([
         {property: 'property', reducer: Rule.minimumValueReducer}
       ]);
-      const result = subject('ruleName', [
-        {ruleName: {property: 1}},
-        {ruleName: {property: 2}},
+      const result = subject([
+        {property: 1},
+        {property: 2},
       ]);
       assert.equal(result.property, 1);
     });
@@ -65,9 +65,9 @@ describe('Rule', function () {
         {property: 'property1', reducer: Rule.minimumValueReducer},
         {property: 'property2', reducer: Rule.minimumValueReducer}
       ]);
-      const result = subject('ruleName', [
-        {ruleName: {property1: 1, property2: 50}},
-        {ruleName: {property1: 2, property2: 5}}
+      const result = subject([
+        {property1: 1, property2: 50},
+        {property1: 2, property2: 5}
       ]);
       assert.equal(result.property1, 1);
       assert.equal(result.property2, 5);
