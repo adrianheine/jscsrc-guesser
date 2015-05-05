@@ -50,6 +50,10 @@ You can also pass some optional arguments you could pass to `jscs`:
 * Handle rules which failed rarely (for example by interactively proposing to
 add them to the output)
 
+## Known limitations
+
+* `requireNamedUnassignedFunctions` is not tried with `allExcept` values
+
 ## License
 
 AGPL

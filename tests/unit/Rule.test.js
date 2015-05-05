@@ -73,4 +73,10 @@ describe('Rule', function () {
       assert.equal(result.property2, 5);
     });
   });
+  describe('ArrNonEmptySubsetRuleValues', function () {
+    it('returns the right amount of values with three input values', function () {
+      const ret = new Rule.ArrNonEmptySubsetRuleValues([1, 2, 3]).getValues('ruleName');
+      assert.equal(ret.length, 7);
+    });
+  });
 });
