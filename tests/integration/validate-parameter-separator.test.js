@@ -17,15 +17,16 @@
 
 'use strict';
 
+const assert = require('assert');
+
 var jscsrcGuesser = require('../../lib/jscsrc-guesser');
 
 describe('validateParameterSeparator', function () {
   it('is not set if multiple values pass', function (done) {
     jscsrcGuesser([__dirname + '/../data/es-next-snippet.js'], {esnext: true})
     .then(function (result) {
-      if (result.config.validateParameterSeparator) {
-        return done('validateParameterSeparator should not be set');
-      }
+      assert(!result.config.validateParameterSeparator,
+        'validateParameterSeparator should not be set');
       done();
     }).catch(done);
   });

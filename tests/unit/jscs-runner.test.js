@@ -17,6 +17,8 @@
 
 'use strict';
 
+const assert = require('assert');
+
 const jscsRunner = require('../../lib/jscs-runner');
 const esNextSnippetPath = __dirname + '/../data/es-next-snippet.js';
 const es5SnippetPath = __dirname + '/../data/es5-snippet.js';
@@ -37,14 +39,16 @@ describe('jscsRunner', function () {
   it('correctly fails without es3', function (done) {
     jscsRunner({requireDotNotation: true}, {es3: false}, [es5SnippetPath])
       .then(function (failingRules) {
-        done(failingRules.length === 1 ? null : 'Should have failed');
+        assert.equal(failingRules.length, 1);
+        done();
       })
       .catch(done);
   });
   it('correctly passes with es3', function (done) {
     jscsRunner({requireDotNotation: true}, {es3: true}, [es5SnippetPath])
       .then(function (failingRules) {
-        done(failingRules.length === 0 ? null : 'Should not have failed');
+        assert.equal(failingRules.length, 0);
+        done();
       })
       .catch(done);
   });
@@ -52,7 +56,8 @@ describe('jscsRunner', function () {
     const rules = {requireDotNotation: true};
     jscsRunner(rules, {es3: true}, [es5SnippetPath])
       .then(function () {
-        done(Object.keys(rules).length === 1 ? null : 'Should not have altered first parameter');
+        assert.equal(Object.keys(rules).length, 1);
+        done();
       })
       .catch(done);
   });

@@ -17,15 +17,15 @@
 
 'use strict';
 
+const assert = require('assert');
+
 var jscsrcGuesser = require('../../lib/jscsrc-guesser');
 
 describe('requireAlignedObjectValues', function () {
   it('is set to all if multiple values pass', function (done) {
     jscsrcGuesser([__dirname + '/../data/es-next-snippet.js'], {esnext: true})
     .then(function (result) {
-      if (result.config.requireAlignedObjectValues !== 'all') {
-        return done('requireAlignedObjectValues should be all');
-      }
+      assert.equal(result.config.requireAlignedObjectValues, 'all');
       done();
     }).catch(done);
   });
