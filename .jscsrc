@@ -203,5 +203,5 @@
   "validateLineBreaks" : "LF",
   "validateParameterSeparator": ", ",
   "validateQuoteMarks": true,
-  "excludeFiles": ["node_modules/**", "tests/**/*snippet.js"]
+  "excludeFiles": ["bin/jscsrc-guesser", "node_modules/**", "tests/**/*snippet.js"]
 }
