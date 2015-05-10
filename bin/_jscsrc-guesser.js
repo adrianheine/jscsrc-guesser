@@ -1,6 +1,3 @@
-#!/bin/sh
-':' //# http://sambal.org/?p=1014; exec /usr/bin/env node --harmony "$0" "$@"
-
 /**
  * Copyright 2015 Adrian Heine <mail@adrianheine.de>
  *
@@ -20,4 +17,26 @@
 
 'use strict';
 
-require('./_jscsrc-guesser');
+var cli = require('../lib/cli');
+
+/**
+ * Command line implementation for jscs-guesser.
+ *
+ * Common usage case is:
+ *
+ * ./node_modules/.bin/jscs-guesser file1 dir1 file2 dir2
+ */
+var program = require('commander');
+
+program
+    .version(require('../package.json').version)
+    .usage('[options] <path ...>')
+    .description('A JSCS configuration guesser.')
+    //.option('-c, --config [path]', 'configuration file path')
+    .option('-e, --esnext', 'attempts to parse esnext code (currently es6)')
+    .option('--es3', 'validates code as es3')
+    .option('-s, --esprima <path>', 'attempts to use a custom version of Esprima')
+    //.option('-p, --preset <preset>', 'preset config')
+    .parse(process.argv);
+
+cli(program);
