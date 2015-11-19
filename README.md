@@ -33,7 +33,6 @@ You can also pass some optional arguments you could pass to `jscs`:
 
 ### Fixes
 * Handle all different possible values for all rules
-* Don't put opposing rules in jscsrc just because they didn't fail
 * Fold multi-value options back to true
 
 ### Features
