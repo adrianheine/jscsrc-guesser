@@ -47,42 +47,9 @@
     "in",
     "do"
   ],
-  "requireKeywordsOnNewLine": [
-    "return",
-    "const",
-    "this",
-    "for"
-  ],
   "disallowKeywordsOnNewLine": [
     "else",
     "typeof"
-  ],
-  "validateJSDoc": {
-    "requireParamTypes": true,
-    "checkRedundantParams": true,
-    "checkParamNames": true
-  },
-  "requireSpacesInAnonymousFunctionExpression": {
-    "beforeOpeningCurlyBrace": true,
-    "beforeOpeningRoundBrace": true
-  },
-  "requireSpacesInFunctionDeclaration": {
-    "beforeOpeningCurlyBrace": true
-  },
-  "requireSpacesInFunctionExpression": {
-    "beforeOpeningCurlyBrace": true,
-    "beforeOpeningRoundBrace": true
-  },
-  "requireSpacesInFunction": {
-    "beforeOpeningCurlyBrace": true
-  },
-  "requireSpacesInNamedFunctionExpression": {
-    "beforeOpeningCurlyBrace": true,
-    "beforeOpeningRoundBrace": true
-  },
-  "safeContextKeyword": [
-    "self",
-    "_this"
   ],
   "disallowMixedSpacesAndTabs": true,
   "disallowMultipleLineBreaks": true,
@@ -108,6 +75,12 @@
   "requireDollarBeforejQueryAssignment": true,
   "requireDotNotation": true,
   "requireFunctionDeclarations": true,
+  "requireKeywordsOnNewLine": [
+    "return",
+    "const",
+    "this",
+    "for"
+  ],
   "requireLineBreakAfterVariableAssignment": true,
   "requireLineFeedAtFileEnd": true,
   "requireOperatorBeforeLineBreak": true,
@@ -122,11 +95,39 @@
   "requireSpaceBeforeBlockStatements": true,
   "requireSpaceBeforeObjectValues": true,
   "requireSpaceBetweenArguments": true,
+  "requireSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningCurlyBrace": true,
+    "beforeOpeningRoundBrace": true
+  },
   "requireSpacesInConditionalExpression": true,
   "requireSpacesInForStatement": true,
+  "requireSpacesInFunction": {
+    "beforeOpeningCurlyBrace": true
+  },
+  "requireSpacesInFunctionDeclaration": {
+    "beforeOpeningCurlyBrace": true
+  },
+  "requireSpacesInFunctionExpression": {
+    "beforeOpeningCurlyBrace": true,
+    "beforeOpeningRoundBrace": true
+  },
+  "requireSpacesInNamedFunctionExpression": {
+    "beforeOpeningCurlyBrace": true,
+    "beforeOpeningRoundBrace": true
+  },
+  "safeContextKeyword": [
+    "self",
+    "_this"
+  ],
   "validateIndentation": 2,
-  "validateLineBreaks" : "LF",
+  "validateJSDoc": {
+    "checkParamNames": true,
+    "checkRedundantParams": true,
+    "requireParamTypes": true
+  },
+  "validateLineBreaks": "LF",
   "validateParameterSeparator": ", ",
   "validateQuoteMarks": true,
+
   "excludeFiles": ["node_modules/**", "tests/**/*snippet.js"]
 }
