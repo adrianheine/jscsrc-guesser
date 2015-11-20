@@ -24,17 +24,10 @@ const esNextSnippetPath = __dirname + '/../data/es-next-snippet.js';
 const es5SnippetPath = __dirname + '/../data/es5-snippet.js';
 
 describe('jscsRunner', function () {
-  it('correctly passes esnext', function (done) {
-    jscsRunner({}, {esnext: true}, [esNextSnippetPath]).then(function () {
+  it('defaults to esnext', function (done) {
+    jscsRunner({}, {}, [esNextSnippetPath]).then(function () {
       done();
     }).catch(done);
-  });
-  it('correctly fails without esnext', function (done) {
-    jscsRunner({}, {esnext: false}, [esNextSnippetPath]).then(function () {
-      done('Should not have passed');
-    }).catch(function () {
-      done();
-    });
   });
   it('correctly fails without es3', function (done) {
     jscsRunner({requireDotNotation: true}, {es3: false}, [es5SnippetPath])

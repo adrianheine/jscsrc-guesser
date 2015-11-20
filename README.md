@@ -3,7 +3,7 @@
 **jscsrc-guesser** is a tool that checks some code base and finds those JSCS
 rules the code base follows.
 
-This version emits rules for JSCS 1.13.1.
+This version emits rules for JSCS 2.0.0.
 
 ## Installation
 
@@ -24,23 +24,31 @@ You can also pass some optional arguments you could pass to `jscs`:
 * `requireNamedUnassignedFunctions` is not tried with `allExcept` values
 * `requireSpacesInsideArrayBrackets` is not tried with `allExcept` values
 * `requireSpacesInsideObjectBrackets` is not tried with `allExcept` values
-* `requirePaddingNewLinesAfterBlocks` is not tried with `allExcept` values due to [a bug](https://github.com/jscs-dev/node-jscs/issues/1343)
 * `requireOperatorBeforeLineBreak` is only tried with value `true`
 * `disallowOperatorBeforeLineBreak` is only tried with value `true`
+* `disallowMultipleVarDecl` is only tried with value `true`
+* `disallowSpaceAfterObjectKeys` is only tried with value `true`
+* `disallowCommaBeforeLineBreak` is only tried with value `true`
+* `requirePaddingNewlinesInBlocks` is only tried with value `true`
+* `disallowNewlineBeforeBlockStatements` is only tried with value `true`
+* `requireNewlineBeforeBlockStatements` is only tried with value `true`
 * `requireSpacesInsideParentheses` is only tried with value `all`
 * `safeContextKeyword` is only tried for value `_this` and `self`
 * `maximumNumberOfLines` is only tried with a fixed set of values (50, 100, 200, 500, 1000, 2000)
 * `maximumLineLength` is only tried with a fixed set of values (72, 75, 80, 90, 100, 120)
+  and neither tab size nor exceptions
 * `requireSpaceBeforeBlockStatements` is only tried with a fixed set of values (1, 2, 3, 4, 5)
 * `validateParameterSeparator` is only tried with a fixed set of values (`','`, `' ,'`, `', '`)
 * `validateIndentation` is not tried with all valid configurations
 * `validateNewlineAfterArrayElements` is not tried with all valid configurations
+* `jsDoc` is not tried at all
 
 ## Changelog
 
 ### 0.3.0 (???)
 
 * Fix JSCS invocation by setting `maxErrs` to `Infinity`
+* Update to JSCS 2.0
 
 ### 0.2.0 (2015-11-20)
 
