@@ -9,7 +9,7 @@
   "keywords": [
     "jscs"
   ],
-  "author": "Adrian Heine <adrian.heine@wikimedia.de>",
+  "author": "Adrian Heine <mail@adrianheine.de>",
   "license": "AGPL-3.0",
   "dependencies": {
     "commander": "^2.7.1",
