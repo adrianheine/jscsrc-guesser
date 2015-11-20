@@ -25,6 +25,8 @@ You can also pass some optional arguments you could pass to `jscs`:
 * `requireSpacesInsideArrayBrackets` is not tried with `allExcept` values
 * `requireSpacesInsideObjectBrackets` is not tried with `allExcept` values
 * `requirePaddingNewLinesAfterBlocks` is not tried with `allExcept` values due to [a bug](https://github.com/jscs-dev/node-jscs/issues/1343)
+* `requireOperatorBeforeLineBreak` is only tried with value `true`
+* `disallowOperatorBeforeLineBreak` is only tried with value `true`
 * `requireSpacesInsideParentheses` is only tried with value `all`
 * `safeContextKeyword` is only tried for value `_this` and `self`
 * `maximumNumberOfLines` is only tried with a fixed set of values (50, 100, 200, 500, 1000, 2000)
