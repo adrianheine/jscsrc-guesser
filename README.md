@@ -24,7 +24,7 @@ You can also pass some optional arguments you could pass to `jscs`:
 * Don't include contradictory rules
 * Better handling of validateIndentation, maximumLineLength, requireAlignedObjectValues,
   validateLineBreaks, validateParameterSeparator
-* Update to jscs 1.13
+* Update to JSCS 1.13
 
 ### 0.1.1 (2015-04-25)
 
