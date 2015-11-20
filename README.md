@@ -36,7 +36,7 @@ You can also pass some optional arguments you could pass to `jscs`:
 
 ## Changelog
 
-### 0.2.0 (???)
+### 0.2.0 (2015-11-20)
 
 * Don't include contradictory rules
 * Better handling of validateIndentation, maximumLineLength, requireAlignedObjectValues,
