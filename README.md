@@ -45,7 +45,7 @@ You can also pass some optional arguments you could pass to `jscs`:
 
 ## Changelog
 
-### 0.3.0 (???)
+### 0.3.0 (2015-11-29)
 
 * Fix JSCS invocation by setting `maxErrs` to `Infinity`
 * Update to JSCS 2.0
