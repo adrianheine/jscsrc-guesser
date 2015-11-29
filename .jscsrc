@@ -79,11 +79,9 @@
   "requireCurlyBraces": true,
   "requireDollarBeforejQueryAssignment": true,
   "requireDotNotation": true,
-  "requireFunctionDeclarations": true,
   "requireKeywordsOnNewLine": [
     "return",
     "const",
-    "this",
     "for"
   ],
   "requireLineBreakAfterVariableAssignment": true,

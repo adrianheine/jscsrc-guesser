@@ -38,12 +38,16 @@ You can also pass some optional arguments you could pass to `jscs`:
 * `maximumLineLength` is only tried with a fixed set of values (72, 75, 80, 90, 100, 120)
   and neither tab size nor exceptions
 * `requireSpaceBeforeBlockStatements` is only tried with a fixed set of values (1, 2, 3, 4, 5)
+* `requireBlocksOnNewline` is only tried with a fixed set of minimum lines (0, 1, 2, 3, 4, 5)
 * `validateParameterSeparator` is only tried with a fixed set of values (`','`, `' ,'`, `', '`)
 * `validateIndentation` is not tried with all valid configurations
 * `validateNewlineAfterArrayElements` is not tried with all valid configurations
 * `jsDoc` is not tried at all
 
 ## Changelog
+
+### 0.4.0 (???)
+* Update to JSCS 2.1.1
 
 ### 0.3.0 (2015-11-29)
 

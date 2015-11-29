@@ -4,7 +4,7 @@
   "description": "Determine the JSCS ruleset some code currently follows",
   "main": "lib/jscsrc-guesser.js",
   "scripts": {
-    "test": "jshint --show-non-errors . && jscs --esnext --verbose . && mocha --harmony --check-leaks --recursive tests/**/*.test.js"
+    "test": "jshint --show-non-errors . && jscs --esnext --verbose . && mocha --harmony --check-leaks --recursive 'tests/**/*.test.js'"
   },
   "keywords": [
     "jscs"
@@ -15,7 +15,7 @@
     "commander": "^2.7.1",
     "es6-promise": "*",
     "object-assign": "^2.0.0",
-    "jscs": "2.0.0"
+    "jscs": "2.1.1"
   },
   "devDependencies": {
     "mocha": "",
