@@ -46,7 +46,7 @@ You can also pass some optional arguments you could pass to `jscs`:
 
 ## Changelog
 
-### 0.4.0 (???)
+### 0.4.0 (2015-12-02)
 * Update to JSCS 2.1.1
 
 ### 0.3.0 (2015-11-29)
