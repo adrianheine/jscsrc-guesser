@@ -14,7 +14,7 @@
   "dependencies": {
     "commander": "^2.7.1",
     "es6-promise": "*",
-    "object-assign": "^2.0.0",
+    "object-assign": "^4.0.0",
     "jscs": "2.1.1"
   },
   "devDependencies": {
