@@ -4,11 +4,11 @@ const assert = require('assert');
 const subject = require('../../../lib/jscs-rules/validate-order-in-object-keys');
 
 describe('validateOrderInObjectKeys', function () {
-  it('has the right values', function () {
+  it('has the right number of values', function () {
     const values = subject.getValues();
     assert.equal(values.length, 6);
   });
-  it('yields as if asc is set', function () {
+  it('yields asc if asc is set', function () {
     const rawValues = {
       validateOrderInObjectKeys: [
         'asc'
