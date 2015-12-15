@@ -3,7 +3,7 @@
 **jscsrc-guesser** is a tool that checks some code base and finds those JSCS
 rules the code base follows.
 
-This version emits rules for JSCS 2.0.0.
+This version emits rules for JSCS 2.2.\*.
 
 ## Installation
 
@@ -21,9 +21,12 @@ You can also pass some optional arguments you could pass to `jscs`:
 
 ## Known limitations
 
+* `disallowSpaceBeforeSemicolon` is not tried with `allExcept` values
 * `requireNamedUnassignedFunctions` is not tried with `allExcept` values
 * `requireSpacesInsideArrayBrackets` is not tried with `allExcept` values
 * `requireSpacesInsideObjectBrackets` is not tried with `allExcept` values
+* `validateCommentPosition` is not tried with `allExcept` values
+* `requireCapitalizedComments` is only tried with value `true`
 * `requireOperatorBeforeLineBreak` is only tried with value `true`
 * `disallowOperatorBeforeLineBreak` is only tried with value `true`
 * `disallowMultipleVarDecl` is only tried with value `true`
@@ -32,6 +35,7 @@ You can also pass some optional arguments you could pass to `jscs`:
 * `requirePaddingNewlinesInBlocks` is only tried with value `true`
 * `disallowNewlineBeforeBlockStatements` is only tried with value `true`
 * `requireNewlineBeforeBlockStatements` is only tried with value `true`
+* `disallowSpacesInsideParentheses` is only tried with value `true`
 * `requireSpacesInsideParentheses` is only tried with value `all`
 * `safeContextKeyword` is only tried for value `_this` and `self`
 * `maximumNumberOfLines` is only tried with a fixed set of values (50, 100, 200, 500, 1000, 2000)
@@ -45,6 +49,9 @@ You can also pass some optional arguments you could pass to `jscs`:
 * `jsDoc` is not tried at all
 
 ## Changelog
+
+### 0.5.0 (2015-12-15)
+* Update to JSCS 2.2.\*
 
 ### 0.4.0 (2015-12-02)
 * Update to JSCS 2.1.1
@@ -78,7 +85,8 @@ You can also pass some optional arguments you could pass to `jscs`:
 * Fold multi-value options back to true
 
 ### Features
-* Compare to presets or existing jscsrc
+* Emit YAML
+* Compare to presets or existing .jscsrc, jscs.json or .jscs.yaml file
 * Sort rules in output alphabetically
 * Add i18n
 * Check which rules checked successfully instead of which rules didn't fail
